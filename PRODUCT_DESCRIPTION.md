@@ -59,7 +59,7 @@ The system doesn't just output text; it creates full-featured Anki packages.
     - Saves raw JSON outputs for auditing, debugging, or re-generation without re-incurring API costs.
     - Exports to Markdown for human-readable review of generated content.
 
-### 4. Operational Reliability & Cost Management
+### 4. Operational Reliability
 Built for long-running batch jobs that process hundreds of topics.
 
 - **Granular Resumability**:
@@ -68,9 +68,6 @@ Built for long-running batch jobs that process hundreds of topics.
 - **Response Caching**:
     - Implements a content-addressable cache (hashing the prompt + model parameters).
     - Prevents paying for the exact same generation twice.
-- **Budgeting System**:
-    - **Pre-Flight Estimation**: analyzing the input queue and provider pricing to estimate total run cost before starting.
-    - **Hard Budget Limit**: Users can set a flag `--budget 5.0` (USD). The system tracks cumulative usage and stops execution before the budget is exceeded.
 
 ### 5. Comprehensive CLI & Querying
 A suite of tools to manage the lifecycle of deck generation.
